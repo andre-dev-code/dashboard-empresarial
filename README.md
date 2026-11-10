@@ -120,15 +120,17 @@ As cores ficam em tokens no `app/globals.css`, e nenhum componente usa cor fixa.
 
 | Par | Cores | Contraste | Mínimo AA |
 |---|---|---|---|
-| Texto / fundo | `#0F172A` / `#F8FAFC` | 17.06:1 | 4.5:1 |
-| Texto / card | `#0F172A` / `#FFFFFF` | 17.85:1 | 4.5:1 |
+| Texto / fundo | `#0F172A` / `#F8FAFC` | 17.0:1 | 4.5:1 |
+| Texto / card | `#0F172A` / `#FFFFFF` | 17.8:1 | 4.5:1 |
 | Texto do botão / botão primário | `#FFFFFF` / `#1D4ED8` | 6.70:1 | 4.5:1 |
 | Texto secundário / fundo | `#475569` / `#F8FAFC` | 7.24:1 | 4.5:1 |
-| Texto secundário / card | `#475569` / `#FFFFFF` | 7.58:1 | 4.5:1 |
+| Texto secundário / card | `#475569` / `#FFFFFF` | 7.57:1 | 4.5:1 |
 | Mensagem de erro / card | `#B91C1C` / `#FFFFFF` | 6.47:1 | 4.5:1 |
-| Borda do input / fundo | `#64748B` / `#F8FAFC` | 4.55:1 | 3:1 |
-| Texto da sidebar / sidebar | `#E2E8F0` / `#0F172A` | 14.48:1 | 4.5:1 |
+| Borda do input / fundo | `#64748B` / `#F8FAFC` | 4.54:1 | 3:1 |
+| Texto da sidebar / sidebar | `#E2E8F0` / `#0F172A` | 14.4:1 | 4.5:1 |
 | Destaque da sidebar / sidebar | `#60A5FA` / `#0F172A` | 7.02:1 | 3:1 |
+
+Todos os 9 pares retornaram `AA: pass` no WebAIM Contrast Checker.
 
 ## Estrutura
 
