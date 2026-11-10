@@ -2,7 +2,7 @@
 
 Painel web onde o usuário cria conta, protege o acesso com 2FA (app autenticador) e cadastra empresas digitando só o CNPJ. Os dados vêm da BrasilAPI e preenchem o formulário automaticamente.
 
-**Produção:** `https://SEU-PROJETO.vercel.app` _(troque pelo link da Vercel)_
+**Produção:** https://dashboard-empresarial-iota.vercel.app
 
 ![Tela de empresas](docs/tela-empresas.jpg)
 
