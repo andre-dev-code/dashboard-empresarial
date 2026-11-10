@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -101,12 +100,12 @@ export function MfaSetup() {
   return (
     <div className="grid gap-4">
       <div className="mx-auto rounded-lg bg-card p-2 ring-1 ring-border">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element -- QR code vem como SVG em data URL, que o next/image não otimiza */}
+        <img
           src={state.qrCode}
           alt="QR code para configurar o app autenticador"
           width={192}
           height={192}
-          unoptimized
         />
       </div>
 

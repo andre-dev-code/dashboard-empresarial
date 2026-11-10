@@ -71,7 +71,7 @@ export async function CompaniesOverview() {
                 {companies.map((company) => (
                   <TableRow key={company.id}>
                     <TableCell className="whitespace-nowrap">{formatCnpj(company.cnpj)}</TableCell>
-                    <TableCell>
+                    <TableCell className="min-w-48 whitespace-normal">
                       <p className="font-medium">{company.razao_social}</p>
                       {company.nome_fantasia ? (
                         <p className="text-sm text-muted-foreground">{company.nome_fantasia}</p>

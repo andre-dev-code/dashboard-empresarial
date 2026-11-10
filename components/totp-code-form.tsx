@@ -24,6 +24,7 @@ export function TotpCodeForm({ submitLabel, error, onSubmit }: TotpCodeFormProps
 
   return (
     <form
+      method="post"
       onSubmit={handleSubmit(({ code }) => onSubmit(code))}
       className="grid gap-4"
       noValidate

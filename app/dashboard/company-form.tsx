@@ -121,7 +121,7 @@ export function CompanyForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4" noValidate>
+        <form method="post" onSubmit={handleSubmit(onSubmit)} className="grid gap-4" noValidate>
           <FormField id="cnpj" label="CNPJ" error={errors.cnpj?.message}>
             <div className="flex flex-col gap-2 sm:flex-row">
               <Input

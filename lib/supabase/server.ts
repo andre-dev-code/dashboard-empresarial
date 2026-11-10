@@ -2,11 +2,13 @@ import "server-only";
 
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { connection } from "next/server";
 
 import type { Database } from "./database.types";
 import { getSupabaseEnv } from "./env";
 
 export async function createClient() {
+  await connection();
   const cookieStore = await cookies();
   const { url, anonKey } = getSupabaseEnv();
 

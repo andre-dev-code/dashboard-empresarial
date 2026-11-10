@@ -34,6 +34,7 @@ export async function GET(_request: Request, context: RouteContext<"/api/cnpj/[c
   try {
     response = await fetch(`https://brasilapi.com.br/api/cnpj/v1/${cnpj}`, {
       signal: controller.signal,
+      headers: { Accept: "application/json", "User-Agent": "dashboard-empresarial/1.0" },
       cache: "force-cache",
       next: { revalidate: ONE_DAY },
     });

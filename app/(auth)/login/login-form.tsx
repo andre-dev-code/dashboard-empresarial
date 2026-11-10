@@ -39,7 +39,7 @@ export function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4" noValidate>
+    <form method="post" onSubmit={handleSubmit(onSubmit)} className="grid gap-4" noValidate>
       <FormField id="email" label="E-mail" error={errors.email?.message}>
         <Input
           id="email"
