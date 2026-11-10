@@ -4,7 +4,7 @@ Painel web onde o usuário cria conta, protege o acesso com 2FA (app autenticado
 
 **Produção:** `https://SEU-PROJETO.vercel.app` _(troque pelo link da Vercel)_
 
-![Tela de empresas](docs/tela-empresas.png)
+![Tela de empresas](docs/tela-empresas.jpg)
 
 ## Funcionalidades
 
@@ -96,9 +96,15 @@ O `project-ref` é o trecho do Project URL antes de `.supabase.co`.
 pnpm prova-2fa voce@exemplo.com SuaSenha
 ```
 
-O resultado esperado é: leitura com HTTP 200 e lista vazia `[]`, e gravação com HTTP 401/403 e `new row violates row-level security policy for table "companies"` (código `42501`).
+Saída real, com uma conta que tinha 2FA ativo e 3 empresas cadastradas:
 
-![Prova do 2FA](docs/prova-2fa.png)
+```text
+1) Login só com senha: OK. Nível da sessão (aal) = aal1
+2) Leitura (SELECT) -> HTTP 200: []
+   A policy filtra tudo: a lista volta vazia mesmo que existam empresas.
+3) Gravação (INSERT) -> HTTP 403: {"code":"42501","details":null,"hint":null,"message":"new row violates row-level security policy for table \"companies\""}
+   O Postgres recusa a linha: a sessão não passou pelo segundo fator.
+```
 
 ## `anon key` × `service_role key`
 
